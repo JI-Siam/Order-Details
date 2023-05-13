@@ -27,11 +27,14 @@ string getlocation(){
 return location;
 }
 void showOrderDetails(){
-    cout<<"\t\t\tOrder Number:"<<order_number<<endl;
-    cout<<"\t\t\tOrder Location:"<<location<<endl;
+    cout<<"\t\t\tOrder Number       : "<<order_number<<endl;
+    cout<<"\t\t\tOrder Location     : "<<location<<endl;
+    cout<<"\t\t\tProduct Price      : "<<price<<endl;
     float dicprc=(price*discount)/100.0;
     double totalpay=price-dicprc+50;
-    cout<<"\t\t\tTotal Payable Price:"<<totalpay<<endl;
+    cout<<"\t\t\tDelivery Charge    : 50 Taka"<<endl;
+    cout<<"\t\t\t<Congratulations You Got "<<discount<<"% Discount>"<<endl;
+    cout<<"\t\t\tTotal Payable Price: "<<totalpay<<endl;
 
 }
 
