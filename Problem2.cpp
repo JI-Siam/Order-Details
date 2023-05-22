@@ -43,19 +43,20 @@ void showOrderDetails(){
 int main()
 
 {
+    int order[250];
+   string loc[250];
+   float price[250];
+   int discnt[250];
+    for(int i=1;i>0;i++){
 
-   int order;
-   string loc;
-   float price;
-   int discnt;
    cout<<"Enter Order Number:";
-   cin>>order;
+   cin>>order[i];
    cout<<"Enter Location:";
-   cin>>loc;
+   cin>>loc[i];
    cout<<"Enter Discount Percentage:";
-   cin>>discnt;
+   cin>>discnt[i];
    cout<<"Enter Price:";
-   cin>>price;
+   cin>>price[i];
    system("cls");
       cout<<"_____________________________________________________________________________________"<<endl;
         cout<<"|                                ORDER DETAILS                                      |  "<<endl;
@@ -65,10 +66,22 @@ int main()
         cout<<"|                                                                                   |\n";
 
 
-   Order o1(order,price);
-   o1.setdiscount(discnt);
-   o1.setlocation(loc);
+   Order o1(order[i],price[i]);
+   o1.setdiscount(discnt[i]);
+   o1.setlocation(loc[i]);
    o1.showOrderDetails();
+   cout<<"\n\n\n\t\t\t";
+    char flag;
+   cout<<"To continue enter Y/y else press any key:";
+   cin>>flag;
+   if(flag=='Y'|| flag=='y'){
+        system("cls");
+    continue;
+   }
+   else{
+    break;
+   }
+    }
 
 
     return 0;
